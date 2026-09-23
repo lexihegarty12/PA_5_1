@@ -2245,7 +2245,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 
 <section id="hierarchical-data-the-json-data-format-and-apis" class="level1">
 <h1>Hierarchical Data, the JSON Data Format, and APIs</h1>
-<div id="cell-2" class="cell" data-execution_count="6">
+<div id="cell-2" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <section id="shows-data" class="level2">
@@ -2261,288 +2261,10 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 </div>
 <div id="cell-5" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df_shows <span class="op">=</span> pd.json_normalize(data_shows)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df_shows</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">id</th>
-<th data-quarto-table-cell-role="th">url</th>
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">type</th>
-<th data-quarto-table-cell-role="th">language</th>
-<th data-quarto-table-cell-role="th">genres</th>
-<th data-quarto-table-cell-role="th">status</th>
-<th data-quarto-table-cell-role="th">runtime</th>
-<th data-quarto-table-cell-role="th">premiered</th>
-<th data-quarto-table-cell-role="th">officialSite</th>
-<th data-quarto-table-cell-role="th">...</th>
-<th data-quarto-table-cell-role="th">externals.thetvdb</th>
-<th data-quarto-table-cell-role="th">externals.imdb</th>
-<th data-quarto-table-cell-role="th">image.medium</th>
-<th data-quarto-table-cell-role="th">image.original</th>
-<th data-quarto-table-cell-role="th">network</th>
-<th data-quarto-table-cell-role="th">webChannel.id</th>
-<th data-quarto-table-cell-role="th">webChannel.name</th>
-<th data-quarto-table-cell-role="th">webChannel.country.name</th>
-<th data-quarto-table-cell-role="th">webChannel.country.code</th>
-<th data-quarto-table-cell-role="th">webChannel.country.timezone</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>139</td>
-<td>http://www.tvmaze.com/shows/139/girls</td>
-<td>Girls</td>
-<td>Scripted</td>
-<td>English</td>
-<td>[Drama, Romance]</td>
-<td>Ended</td>
-<td>30</td>
-<td>2012-04-15</td>
-<td>http://www.hbo.com/girls</td>
-<td>...</td>
-<td>220411</td>
-<td>tt1723816</td>
-<td>http://static.tvmaze.com/uploads/images/medium...</td>
-<td>http://static.tvmaze.com/uploads/images/origin...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>722</td>
-<td>http://www.tvmaze.com/shows/722/the-golden-girls</td>
-<td>The Golden Girls</td>
-<td>Scripted</td>
-<td>English</td>
-<td>[Drama, Comedy]</td>
-<td>Ended</td>
-<td>30</td>
-<td>1985-09-14</td>
-<td>NaN</td>
-<td>...</td>
-<td>71292</td>
-<td>tt0088526</td>
-<td>http://static.tvmaze.com/uploads/images/medium...</td>
-<td>http://static.tvmaze.com/uploads/images/origin...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>23542</td>
-<td>http://www.tvmaze.com/shows/23542/good-girls</td>
-<td>Good Girls</td>
-<td>Scripted</td>
-<td>English</td>
-<td>[Drama, Comedy, Crime]</td>
-<td>Running</td>
-<td>60</td>
-<td>2018-02-26</td>
-<td>https://www.nbc.com/good-girls?nbc=1</td>
-<td>...</td>
-<td>328577</td>
-<td>tt6474378</td>
-<td>http://static.tvmaze.com/uploads/images/medium...</td>
-<td>http://static.tvmaze.com/uploads/images/origin...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>6771</td>
-<td>http://www.tvmaze.com/shows/6771/the-powerpuff...</td>
-<td>The Powerpuff Girls</td>
-<td>Animation</td>
-<td>English</td>
-<td>[Comedy, Action, Science-Fiction]</td>
-<td>Running</td>
-<td>15</td>
-<td>2016-04-04</td>
-<td>https://www.cartoonnetwork.com/video/powerpuff...</td>
-<td>...</td>
-<td>307473</td>
-<td>tt4718304</td>
-<td>http://static.tvmaze.com/uploads/images/medium...</td>
-<td>http://static.tvmaze.com/uploads/images/origin...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>42726</td>
-<td>http://www.tvmaze.com/shows/42726/florida-girls</td>
-<td>Florida Girls</td>
-<td>Scripted</td>
-<td>English</td>
-<td>[Comedy]</td>
-<td>Running</td>
-<td>30</td>
-<td>2019-07-10</td>
-<td>https://poptv.com/floridagirls</td>
-<td>...</td>
-<td>363682</td>
-<td>tt8548870</td>
-<td>http://static.tvmaze.com/uploads/images/medium...</td>
-<td>http://static.tvmaze.com/uploads/images/origin...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">5</th>
-<td>32087</td>
-<td>http://www.tvmaze.com/shows/32087/chicken-girls</td>
-<td>Chicken Girls</td>
-<td>Scripted</td>
-<td>English</td>
-<td>[Drama, Children, Music]</td>
-<td>Running</td>
-<td>16</td>
-<td>2017-09-05</td>
-<td>https://www.youtube.com/playlist?list=PLVewHiZ...</td>
-<td>...</td>
-<td>339854</td>
-<td>NaN</td>
-<td>http://static.tvmaze.com/uploads/images/medium...</td>
-<td>http://static.tvmaze.com/uploads/images/origin...</td>
-<td>NaN</td>
-<td>274.0</td>
-<td>Brat</td>
-<td>United States</td>
-<td>US</td>
-<td>America/New_York</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">6</th>
-<td>33320</td>
-<td>http://www.tvmaze.com/shows/33320/derry-girls</td>
-<td>Derry Girls</td>
-<td>Scripted</td>
-<td>English</td>
-<td>[Comedy]</td>
-<td>Running</td>
-<td>30</td>
-<td>2018-01-04</td>
-<td>http://www.channel4.com/programmes/derry-girls</td>
-<td>...</td>
-<td>338903</td>
-<td>tt7120662</td>
-<td>http://static.tvmaze.com/uploads/images/medium...</td>
-<td>http://static.tvmaze.com/uploads/images/origin...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">7</th>
-<td>1955</td>
-<td>http://www.tvmaze.com/shows/1955/the-powerpuff...</td>
-<td>The Powerpuff Girls</td>
-<td>Animation</td>
-<td>English</td>
-<td>[Action, Children, Crime]</td>
-<td>Ended</td>
-<td>30</td>
-<td>1998-11-18</td>
-<td>NaN</td>
-<td>...</td>
-<td>76200</td>
-<td>tt0175058</td>
-<td>http://static.tvmaze.com/uploads/images/medium...</td>
-<td>http://static.tvmaze.com/uploads/images/origin...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">8</th>
-<td>1073</td>
-<td>http://www.tvmaze.com/shows/1073/bomb-girls</td>
-<td>Bomb Girls</td>
-<td>Scripted</td>
-<td>English</td>
-<td>[Drama, Romance, War]</td>
-<td>Ended</td>
-<td>60</td>
-<td>2012-01-04</td>
-<td>NaN</td>
-<td>...</td>
-<td>254378</td>
-<td>tt1955311</td>
-<td>http://static.tvmaze.com/uploads/images/medium...</td>
-<td>http://static.tvmaze.com/uploads/images/origin...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">9</th>
-<td>525</td>
-<td>http://www.tvmaze.com/shows/525/gilmore-girls</td>
-<td>Gilmore Girls</td>
-<td>Scripted</td>
-<td>English</td>
-<td>[Drama, Comedy, Romance]</td>
-<td>Ended</td>
-<td>60</td>
-<td>2000-10-05</td>
-<td>NaN</td>
-<td>...</td>
-<td>76568</td>
-<td>tt0238784</td>
-<td>http://static.tvmaze.com/uploads/images/medium...</td>
-<td>http://static.tvmaze.com/uploads/images/origin...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-</tbody>
-</table>
-
-<p>10 rows × 35 columns</p>
-</div>
-</div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># #df_shows</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>1. Summarize the networks represented by these shows and the number of these shows that aired on each network.</p>
-<div id="cell-7" class="cell" data-execution_count="9">
+<div id="cell-7" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(data_shows), <span class="bu">len</span>(data_shows))</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_shows.shape)</span>
@@ -2557,7 +2279,7 @@ dict_keys([&#39;id&#39;, &#39;url&#39;, &#39;name&#39;, &#39;type&#39;, &#39;lan
 </div>
 </div>
 <p>2. Find the number of seasons for each show in the data. Do this two ways: one which uses <code>df_shows</code>, and another that first flattens <code>data_shows</code> to a different data frame.</p>
-<div id="cell-9" class="cell" data-execution_count="25">
+<div id="cell-9" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># number of seasons for each show using df_shows</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>df_shows[<span class="st">&quot;network.name&quot;</span>].value_counts(dropna <span class="op">=</span> <span class="va">False</span>)</span>
@@ -2573,7 +2295,7 @@ dict_keys([&#39;id&#39;, &#39;url&#39;, &#39;name&#39;, &#39;type&#39;, &#39;lan
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>df_seasons.head(<span class="dv">5</span>)</span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>df_seasons.groupby([<span class="st">&quot;show_id&quot;</span>, <span class="st">&quot;show_name&quot;</span>]).size().reset_index </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="25">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>&lt;bound method Series.reset_index of show_id  show_name          
 139      Girls                  6
 525      Gilmore Girls          8
@@ -2589,7 +2311,7 @@ dtype: int64&gt;</code></pre>
 </div>
 </div>
 <p>3. For each episode, find the length (number of characters) of the title. Then create summaries to answer: Which show tends to have the longest episode titles? The shortest?</p>
-<div id="cell-11" class="cell" data-execution_count="24">
+<div id="cell-11" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ast</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2639,7 +2361,7 @@ Derry Girls 12.5</code></pre>
 </div>
 </div>
 <p>4. Do any cast members in the data set share a birthday with you? Who, and what show are they on? (If there isn’t anyone, try a different day.)</p>
-<div id="cell-13" class="cell" data-execution_count="26">
+<div id="cell-13" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>df_cast <span class="op">=</span> pd.json_normalize(</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    data_shows,</span>
@@ -2671,9 +2393,9 @@ Index: []</code></pre>
 <p>Now you will work with the <a href="http://www.tvmaze.com/api">TVMaze API</a> from the reading. Use the API to request JSON data that you can use to answer the following questions.</p>
 <p>1. What was the longest show that aired in the U.S. on February 4, 2018?</p>
 <p><em>Hint:</em> Use the <a href="http://www.tvmaze.com/api#schedule">“Schedule” endpoint</a> to first get the data for all shows that aired on that date.</p>
-<div id="cell-17" class="cell" data-execution_count="12">
+<div id="cell-17" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://api.tvmaze.com/schedule?country=US&amp;date=2018-02-04&quot;</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(url)</span>
@@ -2681,1031 +2403,9 @@ Index: []</code></pre>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>schedule <span class="op">=</span> response.json()</span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>df_schedule <span class="op">=</span> pd.json_normalize(schedule)</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>df_schedule</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">id</th>
-<th data-quarto-table-cell-role="th">url</th>
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">season</th>
-<th data-quarto-table-cell-role="th">number</th>
-<th data-quarto-table-cell-role="th">type</th>
-<th data-quarto-table-cell-role="th">airdate</th>
-<th data-quarto-table-cell-role="th">airtime</th>
-<th data-quarto-table-cell-role="th">airstamp</th>
-<th data-quarto-table-cell-role="th">runtime</th>
-<th data-quarto-table-cell-role="th">...</th>
-<th data-quarto-table-cell-role="th">image.medium</th>
-<th data-quarto-table-cell-role="th">image.original</th>
-<th data-quarto-table-cell-role="th">show.network</th>
-<th data-quarto-table-cell-role="th">show.webChannel.id</th>
-<th data-quarto-table-cell-role="th">show.webChannel.name</th>
-<th data-quarto-table-cell-role="th">show.webChannel.country.name</th>
-<th data-quarto-table-cell-role="th">show.webChannel.country.code</th>
-<th data-quarto-table-cell-role="th">show.webChannel.country.timezone</th>
-<th data-quarto-table-cell-role="th">show.webChannel.officialSite</th>
-<th data-quarto-table-cell-role="th">show.image</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>1442787</td>
-<td>https://www.tvmaze.com/episodes/1442787/1st-lo...</td>
-<td>Going for Gold in PyeongChang</td>
-<td>9</td>
-<td>14.0</td>
-<td>regular</td>
-<td>2018-02-03</td>
-<td>01:02</td>
-<td>2018-02-04T06:02:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>1388511</td>
-<td>https://www.tvmaze.com/episodes/1388511/americ...</td>
-<td>Ultimate Italian</td>
-<td>18</td>
-<td>5.0</td>
-<td>regular</td>
-<td>2018-02-03</td>
-<td>02:30</td>
-<td>2018-02-04T07:30:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>1387556</td>
-<td>https://www.tvmaze.com/episodes/1387556/marvel...</td>
-<td>Spider-Island, Part One</td>
-<td>1</td>
-<td>19.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>07:00</td>
-<td>2018-02-04T12:00:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>1387558</td>
-<td>https://www.tvmaze.com/episodes/1387558/marvel...</td>
-<td>Spider-Island, Part Two</td>
-<td>1</td>
-<td>20.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>07:30</td>
-<td>2018-02-04T12:30:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>1390384</td>
-<td>https://www.tvmaze.com/episodes/1390384/ben-10...</td>
-<td>High Stress Express</td>
-<td>2</td>
-<td>11.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>13:00</td>
-<td>2018-02-04T13:00:00+00:00</td>
-<td>11</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">5</th>
-<td>1390385</td>
-<td>https://www.tvmaze.com/episodes/1390385/ben-10...</td>
-<td>Creature Feature</td>
-<td>2</td>
-<td>12.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>13:15</td>
-<td>2018-02-04T13:15:00+00:00</td>
-<td>11</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">6</th>
-<td>1404174</td>
-<td>https://www.tvmaze.com/episodes/1404174/meet-t...</td>
-<td>February 4, 2018</td>
-<td>2018</td>
-<td>5.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>09:00</td>
-<td>2018-02-04T14:00:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">7</th>
-<td>1404625</td>
-<td>https://www.tvmaze.com/episodes/1404625/cbs-ne...</td>
-<td>Episode 5</td>
-<td>2018</td>
-<td>5.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>09:00</td>
-<td>2018-02-04T14:00:00+00:00</td>
-<td>90</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">8</th>
-<td>1407145</td>
-<td>https://www.tvmaze.com/episodes/1407145/xtreme...</td>
-<td>The Scout Gets an LS!</td>
-<td>2018</td>
-<td>2.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>09:00</td>
-<td>2018-02-04T14:00:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">9</th>
-<td>3110358</td>
-<td>https://www.tvmaze.com/episodes/3110358/state-...</td>
-<td>Sunday, February 4, 2018, 9AM</td>
-<td>2018</td>
-<td>5.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>09:00</td>
-<td>2018-02-04T14:00:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">10</th>
-<td>1658667</td>
-<td>https://www.tvmaze.com/episodes/1658667/engine...</td>
-<td>Factory Five Hot Rod Truck</td>
-<td>2018</td>
-<td>2.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>09:30</td>
-<td>2018-02-04T14:30:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">11</th>
-<td>1691935</td>
-<td>https://www.tvmaze.com/episodes/1691935/bunnic...</td>
-<td>Beach Blanket Bunn</td>
-<td>2</td>
-<td>27.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>09:30</td>
-<td>2018-02-04T14:30:00+00:00</td>
-<td>11</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">12</th>
-<td>1393172</td>
-<td>https://www.tvmaze.com/episodes/1393172/close-...</td>
-<td>Actresses</td>
-<td>3</td>
-<td>10.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>10:00</td>
-<td>2018-02-04T15:00:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">13</th>
-<td>1413266</td>
-<td>https://www.tvmaze.com/episodes/1413266/fareed...</td>
-<td>Episode 5</td>
-<td>2018</td>
-<td>5.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>10:00</td>
-<td>2018-02-04T15:00:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">14</th>
-<td>1463687</td>
-<td>https://www.tvmaze.com/episodes/1463687/am-joy...</td>
-<td>Episode 10</td>
-<td>2018</td>
-<td>10.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>10:00</td>
-<td>2018-02-04T15:00:00+00:00</td>
-<td>120</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">15</th>
-<td>1404178</td>
-<td>https://www.tvmaze.com/episodes/1404178/face-t...</td>
-<td>2/4: Face the Nation</td>
-<td>2018</td>
-<td>5.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>10:30</td>
-<td>2018-02-04T15:30:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">16</th>
-<td>1378074</td>
-<td>https://www.tvmaze.com/episodes/1378074/giada-...</td>
-<td>Pizza and Pasta Party</td>
-<td>3</td>
-<td>5.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>11:00</td>
-<td>2018-02-04T16:00:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">17</th>
-<td>1400843</td>
-<td>https://www.tvmaze.com/episodes/1400843/the-du...</td>
-<td>Pro Football Experience &amp; Combined Sports</td>
-<td>2</td>
-<td>19.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>13:00</td>
-<td>2018-02-04T18:00:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">18</th>
-<td>1384343</td>
-<td>https://www.tvmaze.com/episodes/1384343/the-du...</td>
-<td>Dudes of Destruction &amp; Camping</td>
-<td>2</td>
-<td>20.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>13:30</td>
-<td>2018-02-04T18:30:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">19</th>
-<td>2443736</td>
-<td>https://www.tvmaze.com/episodes/2443736/puppy-...</td>
-<td>Puppy Bowl XIV</td>
-<td>2018</td>
-<td>1.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>15:00</td>
-<td>2018-02-04T20:00:00+00:00</td>
-<td>120</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">20</th>
-<td>1384047</td>
-<td>https://www.tvmaze.com/episodes/1384047/naked-...</td>
-<td>Naked News Magazine 2018-02-04</td>
-<td>2018</td>
-<td>29.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>17:00</td>
-<td>2018-02-04T22:00:00+00:00</td>
-<td>25</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">21</th>
-<td>1524948</td>
-<td>https://www.tvmaze.com/episodes/1524948/this-w...</td>
-<td>We&#39;re All Out of Kidneys</td>
-<td>2018</td>
-<td>5.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>17:15</td>
-<td>2018-02-04T22:15:00+00:00</td>
-<td>120</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>102.0</td>
-<td>Twit</td>
-<td>United States</td>
-<td>US</td>
-<td>America/New_York</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">22</th>
-<td>1397728</td>
-<td>https://www.tvmaze.com/episodes/1397728/abc-wo...</td>
-<td>Episode 35</td>
-<td>2018</td>
-<td>35.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>18:30</td>
-<td>2018-02-04T23:30:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">23</th>
-<td>1405375</td>
-<td>https://www.tvmaze.com/episodes/1405375/super-...</td>
-<td>Super Bowl LII - New England Patriots vs. Phil...</td>
-<td>2018</td>
-<td>1.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>18:30</td>
-<td>2018-02-04T23:30:00+00:00</td>
-<td>210</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">24</th>
-<td>1539991</td>
-<td>https://www.tvmaze.com/episodes/1539991/nbc-ni...</td>
-<td>Feb 4 Sun</td>
-<td>2018</td>
-<td>35.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>18:30</td>
-<td>2018-02-04T23:30:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">25</th>
-<td>1421688</td>
-<td>https://www.tvmaze.com/episodes/1421688/60-min...</td>
-<td>60 Minutes Presents: On the 60 Minutes Menu</td>
-<td>50</td>
-<td>19.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>19:00</td>
-<td>2018-02-05T00:00:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">26</th>
-<td>2623094</td>
-<td>https://www.tvmaze.com/episodes/2623094/washin...</td>
-<td>Fingerling Potatoes</td>
-<td>5</td>
-<td>6.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>19:00</td>
-<td>2018-02-05T00:00:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">27</th>
-<td>3488706</td>
-<td>https://www.tvmaze.com/episodes/3488706/kasie-...</td>
-<td>Episode 5</td>
-<td>2018</td>
-<td>5.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>19:00</td>
-<td>2018-02-05T00:00:00+00:00</td>
-<td>120</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">28</th>
-<td>1371168</td>
-<td>https://www.tvmaze.com/episodes/1371168/counte...</td>
-<td>The Lost Art of Diplomacy</td>
-<td>1</td>
-<td>3.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>20:00</td>
-<td>2018-02-05T01:00:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">29</th>
-<td>1398010</td>
-<td>https://www.tvmaze.com/episodes/1398010/alaska...</td>
-<td>The Blind Side</td>
-<td>7</td>
-<td>NaN</td>
-<td>insignificant_special</td>
-<td>2018-02-04</td>
-<td>20:00</td>
-<td>2018-02-05T01:00:00+00:00</td>
-<td>180</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">30</th>
-<td>1402640</td>
-<td>https://www.tvmaze.com/episodes/1402640/meow-m...</td>
-<td>Nobody&#39;s Purr-fect</td>
-<td>1</td>
-<td>12.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>20:00</td>
-<td>2018-02-05T01:00:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">31</th>
-<td>2193435</td>
-<td>https://www.tvmaze.com/episodes/2193435/master...</td>
-<td>Comida saludable para niños</td>
-<td>1</td>
-<td>4.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>20:00</td>
-<td>2018-02-05T01:00:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">32</th>
-<td>1378070</td>
-<td>https://www.tvmaze.com/episodes/1378070/worst-...</td>
-<td>Leftovers Again?</td>
-<td>12</td>
-<td>5.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>21:00</td>
-<td>2018-02-05T02:00:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">33</th>
-<td>1364750</td>
-<td>https://www.tvmaze.com/episodes/1364750/divorc...</td>
-<td>Ohio</td>
-<td>2</td>
-<td>4.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>22:00</td>
-<td>2018-02-05T03:00:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">34</th>
-<td>1377970</td>
-<td>https://www.tvmaze.com/episodes/1377970/food-f...</td>
-<td>Crime Biters</td>
-<td>3</td>
-<td>15.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>22:00</td>
-<td>2018-02-05T03:00:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">35</th>
-<td>1390505</td>
-<td>https://www.tvmaze.com/episodes/1390505/seekin...</td>
-<td>13 is Enough!</td>
-<td>1</td>
-<td>4.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>22:00</td>
-<td>2018-02-05T03:00:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">36</th>
-<td>1384390</td>
-<td>https://www.tvmaze.com/episodes/1384390/this-i...</td>
-<td>Super Bowl Sunday</td>
-<td>2</td>
-<td>14.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>22:15</td>
-<td>2018-02-05T03:15:00+00:00</td>
-<td>80</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">37</th>
-<td>1376665</td>
-<td>https://www.tvmaze.com/episodes/1376665/crashi...</td>
-<td>Porter Got HBO</td>
-<td>2</td>
-<td>4.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>22:30</td>
-<td>2018-02-05T03:30:00+00:00</td>
-<td>30</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">38</th>
-<td>1392694</td>
-<td>https://www.tvmaze.com/episodes/1392694/starta...</td>
-<td>Frank Oz and the Science of Puppeteering</td>
-<td>4</td>
-<td>17.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>23:00</td>
-<td>2018-02-05T04:00:00+00:00</td>
-<td>60</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">39</th>
-<td>1379986</td>
-<td>https://www.tvmaze.com/episodes/1379986/robot-...</td>
-<td>3 2 1 2 333, 222, 3...66?</td>
-<td>9</td>
-<td>7.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>23:30</td>
-<td>2018-02-05T04:30:00+00:00</td>
-<td>15</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">40</th>
-<td>1387162</td>
-<td>https://www.tvmaze.com/episodes/1387162/hot-st...</td>
-<td>The Bractegon</td>
-<td>1</td>
-<td>7.0</td>
-<td>regular</td>
-<td>2018-02-04</td>
-<td>00:00</td>
-<td>2018-02-05T05:00:00+00:00</td>
-<td>15</td>
-<td>...</td>
-<td>https://static.tvmaze.com/uploads/images/mediu...</td>
-<td>https://static.tvmaze.com/uploads/images/origi...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-</tbody>
-</table>
-
-<p>41 rows × 62 columns</p>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">#df_schedule</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
-</div>
-<div id="cell-18" class="cell" data-execution_count="14">
+<div id="cell-18" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3715,7 +2415,7 @@ Index: []</code></pre>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>longest_show</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>id                                                                            1405375
 url                                 https://www.tvmaze.com/episodes/1405375/super-...
 name                                Super Bowl LII - New England Patriots vs. Phil...
@@ -3733,7 +2433,7 @@ Name: 23, Length: 62, dtype: object</code></pre>
 <p>2. Among all shows that aired in the U.S. on Feburary 4, 2018, which non-voice actors appeared on more than one show? Note: some people are credited with multiple rows on the same show and thus appear as multiple rows in the data frame.</p>
 <p>Hint: You will need to write a for loop to make multiple requests. Use the “show.id” from the data from part 1, and use the <a href="http://www.tvmaze.com/api#show-cast">“Shows” endpoint</a> to get the cast of each show. Don’t forget to stagger your requests, or you will be blocked by the website!</p>
 <div id="cell-20" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time </span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>show_ids <span class="op">=</span> df_schedule[<span class="st">&quot;show.id&quot;</span>].drop_duplicates().tolist()</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>show_names <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>(df_schedule[<span class="st">&quot;show.id&quot;</span>], df_schedule[<span class="st">&quot;show.name&quot;</span>]))</span>
@@ -3756,44 +2456,6 @@ Name: 23, Length: 62, dtype: object</code></pre>
 <span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>    time.sleep(<span class="fl">0.5</span>)</span>
 <span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print(cast_data)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[{&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 117627, &#39;person_name&#39;: &#39;Johnny Devenanzio&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 132602, &#39;person_name&#39;: &#39;Angela Sun&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 71115, &#39;person_name&#39;: &#39;Ashley Roberts&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 51988, &#39;person_name&#39;: &#39;Audrina Patridge&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235612, &#39;person_name&#39;: &#39;Pedro Andrade&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235611, &#39;person_name&#39;: &#39;Gardner Loulan&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 103948, &#39;person_name&#39;: &#39;Viviana Vigil&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 105446, &#39;person_name&#39;: &#39;Ali Fedotowsky&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 198165, &#39;person_name&#39;: &#39;Johanna Botta&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 23836, &#39;person_name&#39;: &#39;Charles Divins&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235613, &#39;person_name&#39;: &#39;Stuart Brazell&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 201773, &#39;person_name&#39;: &#39;Gerrad Hall&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235614, &#39;person_name&#39;: &#39;Maria Sansone&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 109602, &#39;person_name&#39;: &#39;Matt Iseman&#39;}]
-[{&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 117627, &#39;person_name&#39;: &#39;Johnny Devenanzio&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 132602, &#39;person_name&#39;: &#39;Angela Sun&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 71115, &#39;person_name&#39;: &#39;Ashley Roberts&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 51988, &#39;person_name&#39;: &#39;Audrina Patridge&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235612, &#39;person_name&#39;: &#39;Pedro Andrade&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235611, &#39;person_name&#39;: &#39;Gardner Loulan&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 103948, &#39;person_name&#39;: &#39;Viviana Vigil&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 105446, &#39;person_name&#39;: &#39;Ali Fedotowsky&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 198165, &#39;person_name&#39;: &#39;Johanna Botta&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 23836, &#39;person_name&#39;: &#39;Charles Divins&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235613, &#39;person_name&#39;: &#39;Stuart Brazell&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 201773, &#39;person_name&#39;: &#39;Gerrad Hall&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235614, &#39;person_name&#39;: &#39;Maria Sansone&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 109602, &#39;person_name&#39;: &#39;Matt Iseman&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86037, &#39;person_name&#39;: &#39;Christopher Kimball&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86038, &#39;person_name&#39;: &#39;Julia Collin Davison&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86039, &#39;person_name&#39;: &#39;Bridget Lancaster&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86042, &#39;person_name&#39;: &#39;Adam Ried&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86040, &#39;person_name&#39;: &#39;Jack Bishop&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90833, &#39;person_name&#39;: &#39;Dan Souza&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86039, &#39;person_name&#39;: &#39;Bridget Lancaster&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90832, &#39;person_name&#39;: &#39;Lisa McManus&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90835, &#39;person_name&#39;: &#39;Rebecca &quot;Becky&quot; Hays&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188108, &#39;person_name&#39;: &#39;Keith Dresser&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 277808, &#39;person_name&#39;: &#39;Lan Lam&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188109, &#39;person_name&#39;: &#39;Elle Simone Scott&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86041, &#39;person_name&#39;: &#39;Erin McMurrer&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86038, &#39;person_name&#39;: &#39;Julia Collin Davison&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90837, &#39;person_name&#39;: &#39;John &quot;Doc&quot; Willoughby&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90834, &#39;person_name&#39;: &#39;Bryan Roof&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188107, &#39;person_name&#39;: &#39;Tim Chin&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90836, &#39;person_name&#39;: &#39;Yvonne Ruperti&#39;}]
-[{&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 117627, &#39;person_name&#39;: &#39;Johnny Devenanzio&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 132602, &#39;person_name&#39;: &#39;Angela Sun&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 71115, &#39;person_name&#39;: &#39;Ashley Roberts&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 51988, &#39;person_name&#39;: &#39;Audrina Patridge&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235612, &#39;person_name&#39;: &#39;Pedro Andrade&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235611, &#39;person_name&#39;: &#39;Gardner Loulan&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 103948, &#39;person_name&#39;: &#39;Viviana Vigil&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 105446, &#39;person_name&#39;: &#39;Ali Fedotowsky&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 198165, &#39;person_name&#39;: &#39;Johanna Botta&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 23836, &#39;person_name&#39;: &#39;Charles Divins&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235613, &#39;person_name&#39;: &#39;Stuart Brazell&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 201773, &#39;person_name&#39;: &#39;Gerrad Hall&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235614, &#39;person_name&#39;: &#39;Maria Sansone&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 109602, &#39;person_name&#39;: &#39;Matt Iseman&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86037, &#39;person_name&#39;: &#39;Christopher Kimball&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86038, &#39;person_name&#39;: &#39;Julia Collin Davison&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86039, &#39;person_name&#39;: &#39;Bridget Lancaster&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86042, &#39;person_name&#39;: &#39;Adam Ried&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86040, &#39;person_name&#39;: &#39;Jack Bishop&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90833, &#39;person_name&#39;: &#39;Dan Souza&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86039, &#39;person_name&#39;: &#39;Bridget Lancaster&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90832, &#39;person_name&#39;: &#39;Lisa McManus&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90835, &#39;person_name&#39;: &#39;Rebecca &quot;Becky&quot; Hays&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188108, &#39;person_name&#39;: &#39;Keith Dresser&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 277808, &#39;person_name&#39;: &#39;Lan Lam&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188109, &#39;person_name&#39;: &#39;Elle Simone Scott&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86041, &#39;person_name&#39;: &#39;Erin McMurrer&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86038, &#39;person_name&#39;: &#39;Julia Collin Davison&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90837, &#39;person_name&#39;: &#39;John &quot;Doc&quot; Willoughby&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90834, &#39;person_name&#39;: &#39;Bryan Roof&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188107, &#39;person_name&#39;: &#39;Tim Chin&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90836, &#39;person_name&#39;: &#39;Yvonne Ruperti&#39;}, {&#39;show_id&#39;: 21928, &#39;show_name&#39;: &quot;Marvel&#39;s Spider-Man&quot;, &#39;person_id&#39;: 124867, &#39;person_name&#39;: &#39;Robbie Daymond&#39;}]
-[{&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 117627, &#39;person_name&#39;: &#39;Johnny Devenanzio&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 132602, &#39;person_name&#39;: &#39;Angela Sun&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 71115, &#39;person_name&#39;: &#39;Ashley Roberts&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 51988, &#39;person_name&#39;: &#39;Audrina Patridge&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235612, &#39;person_name&#39;: &#39;Pedro Andrade&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235611, &#39;person_name&#39;: &#39;Gardner Loulan&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 103948, &#39;person_name&#39;: &#39;Viviana Vigil&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 105446, &#39;person_name&#39;: &#39;Ali Fedotowsky&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 198165, &#39;person_name&#39;: &#39;Johanna Botta&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 23836, &#39;person_name&#39;: &#39;Charles Divins&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235613, &#39;person_name&#39;: &#39;Stuart Brazell&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 201773, &#39;person_name&#39;: &#39;Gerrad Hall&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235614, &#39;person_name&#39;: &#39;Maria Sansone&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 109602, &#39;person_name&#39;: &#39;Matt Iseman&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86037, &#39;person_name&#39;: &#39;Christopher Kimball&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86038, &#39;person_name&#39;: &#39;Julia Collin Davison&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86039, &#39;person_name&#39;: &#39;Bridget Lancaster&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86042, &#39;person_name&#39;: &#39;Adam Ried&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86040, &#39;person_name&#39;: &#39;Jack Bishop&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90833, &#39;person_name&#39;: &#39;Dan Souza&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86039, &#39;person_name&#39;: &#39;Bridget Lancaster&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90832, &#39;person_name&#39;: &#39;Lisa McManus&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90835, &#39;person_name&#39;: &#39;Rebecca &quot;Becky&quot; Hays&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188108, &#39;person_name&#39;: &#39;Keith Dresser&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 277808, &#39;person_name&#39;: &#39;Lan Lam&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188109, &#39;person_name&#39;: &#39;Elle Simone Scott&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86041, &#39;person_name&#39;: &#39;Erin McMurrer&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86038, &#39;person_name&#39;: &#39;Julia Collin Davison&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90837, &#39;person_name&#39;: &#39;John &quot;Doc&quot; Willoughby&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90834, &#39;person_name&#39;: &#39;Bryan Roof&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188107, &#39;person_name&#39;: &#39;Tim Chin&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90836, &#39;person_name&#39;: &#39;Yvonne Ruperti&#39;}, {&#39;show_id&#39;: 21928, &#39;show_name&#39;: &quot;Marvel&#39;s Spider-Man&quot;, &#39;person_id&#39;: 124867, &#39;person_name&#39;: &#39;Robbie Daymond&#39;}, {&#39;show_id&#39;: 22084, &#39;show_name&#39;: &#39;Ben 10&#39;, &#39;person_id&#39;: 615, &#39;person_name&#39;: &#39;Tara Strong&#39;}, {&#39;show_id&#39;: 22084, &#39;show_name&#39;: &#39;Ben 10&#39;, &#39;person_id&#39;: 300451, &#39;person_name&#39;: &#39;Montserrat Hernandez&#39;}, {&#39;show_id&#39;: 22084, &#39;show_name&#39;: &#39;Ben 10&#39;, &#39;person_id&#39;: 95605, &#39;person_name&#39;: &#39;David Kaye&#39;}, {&#39;show_id&#39;: 22084, &#39;show_name&#39;: &#39;Ben 10&#39;, &#39;person_id&#39;: 615, &#39;person_name&#39;: &#39;Tara Strong&#39;}]
-[{&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 117627, &#39;person_name&#39;: &#39;Johnny Devenanzio&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 132602, &#39;person_name&#39;: &#39;Angela Sun&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 71115, &#39;person_name&#39;: &#39;Ashley Roberts&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 51988, &#39;person_name&#39;: &#39;Audrina Patridge&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235612, &#39;person_name&#39;: &#39;Pedro Andrade&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235611, &#39;person_name&#39;: &#39;Gardner Loulan&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 103948, &#39;person_name&#39;: &#39;Viviana Vigil&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 105446, &#39;person_name&#39;: &#39;Ali Fedotowsky&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 198165, &#39;person_name&#39;: &#39;Johanna Botta&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 23836, &#39;person_name&#39;: &#39;Charles Divins&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235613, &#39;person_name&#39;: &#39;Stuart Brazell&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 201773, &#39;person_name&#39;: &#39;Gerrad Hall&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 235614, &#39;person_name&#39;: &#39;Maria Sansone&#39;}, {&#39;show_id&#39;: 7795, &#39;show_name&#39;: &#39;1st Look&#39;, &#39;person_id&#39;: 109602, &#39;person_name&#39;: &#39;Matt Iseman&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86037, &#39;person_name&#39;: &#39;Christopher Kimball&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86038, &#39;person_name&#39;: &#39;Julia Collin Davison&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86039, &#39;person_name&#39;: &#39;Bridget Lancaster&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86042, &#39;person_name&#39;: &#39;Adam Ried&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86040, &#39;person_name&#39;: &#39;Jack Bishop&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90833, &#39;person_name&#39;: &#39;Dan Souza&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86039, &#39;person_name&#39;: &#39;Bridget Lancaster&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90832, &#39;person_name&#39;: &#39;Lisa McManus&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90835, &#39;person_name&#39;: &#39;Rebecca &quot;Becky&quot; Hays&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188108, &#39;person_name&#39;: &#39;Keith Dresser&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 277808, &#39;person_name&#39;: &#39;Lan Lam&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188109, &#39;person_name&#39;: &#39;Elle Simone Scott&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86041, &#39;person_name&#39;: &#39;Erin McMurrer&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 86038, &#39;person_name&#39;: &#39;Julia Collin Davison&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90837, &#39;person_name&#39;: &#39;John &quot;Doc&quot; Willoughby&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90834, &#39;person_name&#39;: &#39;Bryan Roof&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 188107, &#39;person_name&#39;: &#39;Tim Chin&#39;}, {&#39;show_id&#39;: 5599, &#39;show_name&#39;: &quot;America&#39;s Test Kitchen&quot;, &#39;person_id&#39;: 90836, &#39;person_name&#39;: &#39;Yvonne Ruperti&#39;}, {&#39;show_id&#39;: 21928, &#39;show_name&#39;: &quot;Marvel&#39;s Spider-Man&quot;, &#39;person_id&#39;: 124867, &#39;person_name&#39;: &#39;Robbie Daymond&#39;}, {&#39;show_id&#39;: 22084, &#39;show_name&#39;: &#39;Ben 10&#39;, &#39;person_id&#39;: 615, &#39;person_name&#39;: &#39;Tara Strong&#39;}, {&#39;show_id&#39;: 22084, &#39;show_name&#39;: &#39;Ben 10&#39;, &#39;person_id&#39;: 300451, &#39;person_name&#39;: &#39;Montserrat Hernandez&#39;}, {&#39;show_id&#39;: 22084, &#39;show_name&#39;: &#39;Ben 10&#39;, &#39;person_id&#39;: 95605, &#39;person_name&#39;: &#39;David Kaye&#39;}, {&#39;show_id&#39;: 22084, &#39;show_name&#39;: &#39;Ben 10&#39;, &#39;person_id&#39;: 615, &#39;person_name&#39;: &#39;Tara Strong&#39;}, {&#39;show_id&#39;: 8835, &#39;show_name&#39;: &#39;Meet the Press&#39;, &#39;person_id&#39;: 179004, &#39;person_name&#39;: &#39;Kristen Welker&#39;}, {&#39;show_id&#39;: 8835, &#39;show_name&#39;: &#39;Meet the Press&#39;, &#39;person_id&#39;: 65834, &#39;person_name&#39;: &#39;Chuck Todd&#39;}, {&#39;show_id&#39;: 8835, &#39;show_name&#39;: &#39;Meet the Press&#39;, &#39;person_id&#39;: 108921, &#39;person_name&#39;: &#39;Chris Wallace&#39;}, {&#39;show_id&#39;: 8835, &#39;show_name&#39;: &#39;Meet the Press&#39;, &#39;person_id&#39;: 214144, &#39;person_name&#39;: &#39;Garrick Utley&#39;}, {&#39;show_id&#39;: 8835, &#39;show_name&#39;: &#39;Meet the Press&#39;, &#39;person_id&#39;: 214145, &#39;person_name&#39;: &#39;Tim Russert&#39;}, {&#39;show_id&#39;: 8835, &#39;show_name&#39;: &#39;Meet the Press&#39;, &#39;person_id&#39;: 128012, &#39;person_name&#39;: &#39;Lawrence E. Spivak&#39;}]</code></pre>
-</div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-
-Cell <span class="ansi-green-fg">In[46], line 19</span>
-
-<span class="ansi-green-fg ansi-bold">     11</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> person[<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">character</span><span style="color:rgb(175,0,0)">&quot;</span>]<span style="color:rgb(98,98,98)">.</span>get(<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">voice</span><span style="color:rgb(175,0,0)">&quot;</span>) <span style="color:rgb(98,98,98)">!=</span> <span style="font-weight:bold;color:rgb(0,135,0)">True</span>:
-
-<span class="ansi-green-fg ansi-bold">     12</span>         cast_data<span style="color:rgb(98,98,98)">.</span>append({
-
-<span class="ansi-green-fg ansi-bold">     13</span>             <span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">show_id</span><span style="color:rgb(175,0,0)">&quot;</span>: show_id,
-
-<span class="ansi-green-fg ansi-bold">     14</span>             <span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">show_name</span><span style="color:rgb(175,0,0)">&quot;</span>: show_names[show_id],
-
-<span class="ansi-green-fg ansi-bold">     15</span>             <span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">person_id</span><span style="color:rgb(175,0,0)">&quot;</span>: person[<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">person</span><span style="color:rgb(175,0,0)">&quot;</span>][<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">id</span><span style="color:rgb(175,0,0)">&quot;</span>],
-
-<span class="ansi-green-fg ansi-bold">     16</span>             <span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">person_name</span><span style="color:rgb(175,0,0)">&quot;</span>: person[<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">person</span><span style="color:rgb(175,0,0)">&quot;</span>][<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">name</span><span style="color:rgb(175,0,0)">&quot;</span>]
-
-<span class="ansi-green-fg ansi-bold">     17</span>         })
-
-<span class="ansi-green-fg">---&gt; 19</span> <span class="ansi-yellow-bg">time</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">sleep</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">0.5</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-green-fg ansi-bold">     21</span> <span style="color:rgb(0,135,0)">print</span>(cast_data)
-
-
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
-</div>
-</div>
 </div>
 </section>
 </section>
@@ -3807,35 +2469,35 @@ Cell <span class="ansi-green-fg">In[46], line 19</span>
 <li>paste this key to replace “PUT-YOUR-KEY-HERE” in the <code>headers</code> below</li>
 </ol>
 <p>If you did everything correctly, then running the cell below should return a JSON object containing all the tags recognized by the Tasty API.</p>
-<div id="cell-22" class="cell" data-execution_count="54">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>domain <span class="op">=</span> <span class="st">&quot;https://tasty.p.rapidapi.com&quot;</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>endpoint <span class="op">=</span> <span class="st">&quot;recipes/list&quot;</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{</span>domain<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>endpoint<span class="sc">}</span><span class="ss">&quot;</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>querystring <span class="op">=</span> {<span class="st">&quot;from&quot;</span>:<span class="st">&quot;0&quot;</span>,<span class="st">&quot;size&quot;</span>:<span class="st">&quot;20&quot;</span>,<span class="st">&quot;q&quot;</span>:<span class="st">&quot;daikon&quot;</span>}</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Update the `headers` with your X-RapidAPI-Key.</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> {</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;X-RapidAPI-Key&quot;</span>: <span class="st">&quot;b9ce2780f7msh755640312df97d0p1ef93ejsn257eb1147ccd&quot;</span>,</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;X-RapidAPI-Host&quot;</span>: <span class="st">&quot;tasty.p.rapidapi.com&quot;</span></span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Make an HTTP request to the REST API, get the JSON response.</span></span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(url, headers<span class="op">=</span>headers, params <span class="op">=</span> querystring)</span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="co"># response.json()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-22" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>domain <span class="op">=</span> <span class="st">&quot;https://tasty.p.rapidapi.com&quot;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>endpoint <span class="op">=</span> <span class="st">&quot;recipes/list&quot;</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{</span>domain<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>endpoint<span class="sc">}</span><span class="ss">&quot;</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>querystring <span class="op">=</span> {<span class="st">&quot;from&quot;</span>:<span class="st">&quot;0&quot;</span>,<span class="st">&quot;size&quot;</span>:<span class="st">&quot;20&quot;</span>,<span class="st">&quot;q&quot;</span>:<span class="st">&quot;daikon&quot;</span>}</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Update the `headers` with your X-RapidAPI-Key.</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> {</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;X-RapidAPI-Key&quot;</span>: <span class="st">&quot;b9ce2780f7msh755640312df97d0p1ef93ejsn257eb1147ccd&quot;</span>,</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;X-RapidAPI-Host&quot;</span>: <span class="st">&quot;tasty.p.rapidapi.com&quot;</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Make an HTTP request to the REST API, get the JSON response.</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(url, headers<span class="op">=</span>headers, params <span class="op">=</span> querystring)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co"># response.json()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>You will need to pass these <code>headers</code> with every HTTP request to the API. The API key (X-RapidAPI-Key) is how the server keeps track of how many requests you have made.</p>
 <p>Take a look at <a href="https://rapidapi.com/apidojo/api/tasty">the documentation</a>. We will use the recipes/list endpoint.</p>
 <p>Make sure you are logged into the account you are created, and select the recipes/list endpoint from the menu at left. Notice that this brings up a form that you can fill in, which generates the corresponding code. By default, it provides Node.js code; change this to Python with the Requests client.</p>
 <p>1. Search for recipes containing “daikon” (an Asian radish) and request the JSON data, and convert it to a Pandas data frame.</p>
-<div id="cell-26" class="cell" data-execution_count="36">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>daikon_recipes <span class="op">=</span> pd.json_normalize(response.json(), <span class="st">&quot;results&quot;</span>)</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>daikon_recipes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="36">
+<div id="cell-26" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>daikon_recipes <span class="op">=</span> pd.json_normalize(response.json(), <span class="st">&quot;results&quot;</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>daikon_recipes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
 <div>
 
 
@@ -4259,23 +2921,23 @@ Cell <span class="ansi-green-fg">In[46], line 19</span>
 </div>
 </div>
 <p>2. How many recipes containing daikon are there? Which one is the cheapest per portion?</p>
-<div id="cell-28" class="cell" data-execution_count="44">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sqlalchemy.engine <span class="im">import</span> result</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># how many recipes</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(daikon_recipes)</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># cheapest per portion</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>cheapest <span class="op">=</span> daikon_recipes[<span class="st">&quot;cost_per_portion&quot;</span>] <span class="op">=</span> (</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    daikon_recipes[<span class="st">&quot;price.total&quot;</span>] <span class="op">/</span></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    daikon_recipes[<span class="st">&quot;num_servings&quot;</span>]</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>cheapest <span class="op">=</span> daikon_recipes.sort_values(</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;cost_per_portion&quot;</span>,</span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    ascending<span class="op">=</span><span class="va">True</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>cheapest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="44">
+<div id="cell-28" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sqlalchemy.engine <span class="im">import</span> result</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># how many recipes</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(daikon_recipes)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># cheapest per portion</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>cheapest <span class="op">=</span> daikon_recipes[<span class="st">&quot;cost_per_portion&quot;</span>] <span class="op">=</span> (</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    daikon_recipes[<span class="st">&quot;price.total&quot;</span>] <span class="op">/</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    daikon_recipes[<span class="st">&quot;num_servings&quot;</span>]</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>cheapest <span class="op">=</span> daikon_recipes.sort_values(</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;cost_per_portion&quot;</span>,</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    ascending<span class="op">=</span><span class="va">True</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>cheapest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
 
@@ -4702,161 +3364,104 @@ Cell <span class="ansi-green-fg">In[46], line 19</span>
 <p><strong>Hint:</strong> Note that there are hundreds of results, but the API only returns 20 results by default and only 40 results maximum, even if you specify the <code>size=</code> parameter, so you will need to use a <code>for</code> loop, incrementing the <code>from=</code> parameter. Be sure to respect the API’s rate limits (or you may be blocked!)</p>
 <p><strong>Note:</strong> Recall from the example in the reading that we created an empty list <code>episodes = []</code> and then added the results of each request to it in the for loop with <code>episodes.extend(response.json())</code>. But note that in the recipes/list endpoint there are two keys: count and results. We only want the results so try instead <code>.extend(response.json()).get(&quot;results&quot;)</code>.</p>
 <p><strong>Suggestion:</strong> Try writing a loop that only makes 2 or 3 requests first so you can test that it’s working correctly. Also, make sure you use separate cells for code that makes requests to the API versus processing of the results; you don’t want to rerun the requests unless absolutely necessary!</p>
-<div id="cell-30" class="cell" data-execution_count="55">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>avocado_recipes <span class="op">=</span> []</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># First request</span></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>querystring <span class="op">=</span> {</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;q&quot;</span>: <span class="st">&quot;avocado&quot;</span>,</span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;from&quot;</span>: <span class="dv">0</span>,</span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;size&quot;</span>: <span class="dv">40</span></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(</span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    url,</span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">=</span>headers,</span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    params<span class="op">=</span>querystring</span>
-<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>response.raise_for_status()</span>
-<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> response.json()</span>
-<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>total_recipes <span class="op">=</span> data[<span class="st">&quot;count&quot;</span>]</span>
-<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>avocado_recipes.extend(data[<span class="st">&quot;results&quot;</span>])</span>
-<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Remaining requests</span></span>
-<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">40</span>, total_recipes, <span class="dv">40</span>):</span>
-<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a>    querystring <span class="op">=</span> {</span>
-<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;q&quot;</span>: <span class="st">&quot;avocado&quot;</span>,</span>
-<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;from&quot;</span>: start,</span>
-<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;size&quot;</span>: <span class="dv">40</span></span>
-<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> requests.get(</span>
-<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a>        url,</span>
-<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a>        headers<span class="op">=</span>headers,</span>
-<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a>        params<span class="op">=</span>querystring</span>
-<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a>    response.raise_for_status()</span>
-<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>    avocado_recipes.extend(response.json()[<span class="st">&quot;results&quot;</span>])</span>
-<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a>    time.sleep(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-30" class="cell" data-execution_count="17">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>avocado_recipes <span class="op">=</span> []</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># First request</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>querystring <span class="op">=</span> {</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;q&quot;</span>: <span class="st">&quot;avocado&quot;</span>,</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;from&quot;</span>: <span class="dv">0</span>,</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;size&quot;</span>: <span class="dv">40</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    url,</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">=</span>headers,</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    params<span class="op">=</span>querystring</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>response.raise_for_status()</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> response.json()</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>total_recipes <span class="op">=</span> data[<span class="st">&quot;count&quot;</span>]</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>avocado_recipes.extend(data[<span class="st">&quot;results&quot;</span>])</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Remaining requests</span></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">40</span>, total_recipes, <span class="dv">40</span>):</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    querystring <span class="op">=</span> {</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;q&quot;</span>: <span class="st">&quot;avocado&quot;</span>,</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;from&quot;</span>: start,</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;size&quot;</span>: <span class="dv">40</span></span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> requests.get(</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>        url,</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>        headers<span class="op">=</span>headers,</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>        params<span class="op">=</span>querystring</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>    response.raise_for_status()</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>    avocado_recipes.extend(response.json()[<span class="st">&quot;results&quot;</span>])</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>    time.sleep(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>4. For the recipes containing avocado, compute the proportion of reviews that are positive. For the avocado recipes with over 500 reviews, which one has the highest proportion of positive reviews?</p>
-<div id="cell-32" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>avocado_recipes <span class="op">=</span> pd.json_normalize(avocado_recipes)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>avocado_recipes[<span class="st">&quot;total_reviews&quot;</span>] <span class="op">=</span> (</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    avocado_recipes[<span class="st">&quot;user_ratings.count_positive&quot;</span>] <span class="op">+</span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    avocado_recipes[<span class="st">&quot;user_ratings.count_negative&quot;</span>]</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<div id="cell-32" class="cell" data-execution_count="19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>avocado_recipes <span class="op">=</span> pd.json_normalize(avocado_recipes)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>avocado_recipes[<span class="st">&quot;total_reviews&quot;</span>] <span class="op">=</span> (</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    avocado_recipes[<span class="st">&quot;user_ratings.count_positive&quot;</span>] <span class="op">+</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    avocado_recipes[<span class="st">&quot;user_ratings.count_negative&quot;</span>]</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>avocado_recipes[<span class="st">&quot;positive_proportion&quot;</span>] <span class="op">=</span> (</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    avocado_recipes[<span class="st">&quot;user_ratings.count_positive&quot;</span>] <span class="op">/</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    avocado_recipes[<span class="st">&quot;total_reviews&quot;</span>]</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-33" class="cell" data-execution_count="20">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>over_500 <span class="op">=</span> avocado_recipes[</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    avocado_recipes[<span class="st">&quot;total_reviews&quot;</span>] <span class="op">&gt;</span> <span class="dv">500</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>highest <span class="op">=</span> over_500.sort_values(</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;positive_proportion&quot;</span>,</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    ascending<span class="op">=</span><span class="va">False</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>).iloc[<span class="dv">0</span>]</span>
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>avocado_recipes[<span class="st">&quot;positive_proportion&quot;</span>] <span class="op">=</span> (</span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    avocado_recipes[<span class="st">&quot;user_ratings.count_positive&quot;</span>] <span class="op">/</span></span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    avocado_recipes[<span class="st">&quot;total_reviews&quot;</span>]</span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>avocado_recipes.head()</span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-
-Cell <span class="ansi-green-fg">In[57], line 2</span>
-
-<span class="ansi-green-fg ansi-bold">      1</span> <span style="font-style:italic;color:rgb(95,135,135)"># YOUR CODE HERE. ADD CELLS AS NEEDED</span>
-
-<span class="ansi-green-fg">----&gt; 2</span> avocado_recipes <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pd</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">json_normalize</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">avocado_recipes</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-green-fg ansi-bold">      4</span> avocado_recipes[<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">total_reviews</span><span style="color:rgb(175,0,0)">&quot;</span>] <span style="color:rgb(98,98,98)">=</span> (
-
-<span class="ansi-green-fg ansi-bold">      5</span>     avocado_recipes[<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">user_ratings.count_positive</span><span style="color:rgb(175,0,0)">&quot;</span>] <span style="color:rgb(98,98,98)">+</span>
-
-<span class="ansi-green-fg ansi-bold">      6</span>     avocado_recipes[<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">user_ratings.count_negative</span><span style="color:rgb(175,0,0)">&quot;</span>]
-
-<span class="ansi-green-fg ansi-bold">      7</span> )
-
-<span class="ansi-green-fg ansi-bold">      9</span> avocado_recipes[<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">positive_proportion</span><span style="color:rgb(175,0,0)">&quot;</span>] <span style="color:rgb(98,98,98)">=</span> (
-
-<span class="ansi-green-fg ansi-bold">     10</span>     avocado_recipes[<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">user_ratings.count_positive</span><span style="color:rgb(175,0,0)">&quot;</span>] <span style="color:rgb(98,98,98)">/</span>
-
-<span class="ansi-green-fg ansi-bold">     11</span>     avocado_recipes[<span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">total_reviews</span><span style="color:rgb(175,0,0)">&quot;</span>]
-
-<span class="ansi-green-fg ansi-bold">     12</span> )
-
-
-
-File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.14/site-packages/pandas/io/json/_normalize.py:548</span>, in <span class="ansi-cyan-fg">json_normalize</span><span class="ansi-blue-fg">(data, record_path, meta, meta_prefix, record_prefix, errors, sep, max_level)</span>
-
-<span class="ansi-green-fg ansi-bold">    543</span>         <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
-
-<span class="ansi-green-fg ansi-bold">    544</span>             msg <span style="color:rgb(98,98,98)">=</span> (
-
-<span class="ansi-green-fg ansi-bold">    545</span>                 <span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">All items in data must be of type dict or NA-like, </span><span style="color:rgb(175,0,0)">&quot;</span>
-
-<span class="ansi-green-fg ansi-bold">    546</span>                 <span style="color:rgb(175,0,0)">f</span><span style="color:rgb(175,0,0)">&quot;</span><span style="color:rgb(175,0,0)">found </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span><span style="color:rgb(0,135,0)">type</span>(item)<span style="color:rgb(98,98,98)">.</span><span style="color:rgb(0,0,135)">__name__</span><span style="font-weight:bold;color:rgb(175,95,135)">}</span><span style="color:rgb(175,0,0)">&quot;</span>
-
-<span class="ansi-green-fg ansi-bold">    547</span>             )
-
-<span class="ansi-green-fg">--&gt; 548</span>             <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">TypeError</span>(msg)
-
-<span class="ansi-green-fg ansi-bold">    549</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
-
-<span class="ansi-green-fg ansi-bold">    550</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">NotImplementedError</span>
-
-
-
-<span class="ansi-red-fg">TypeError</span>: All items in data must be of type dict or NA-like, found str</pre>
-</div>
-</div>
-</div>
-<div id="cell-33" class="cell" data-execution_count="59">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>over_500 <span class="op">=</span> avocado_recipes[</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    avocado_recipes[<span class="st">&quot;total_reviews&quot;</span>] <span class="op">&gt;</span> <span class="dv">500</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>highest <span class="op">=</span> over_500.sort_values(</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;positive_proportion&quot;</span>,</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    ascending<span class="op">=</span><span class="va">False</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>).iloc[<span class="dv">0</span>]</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(highest[[<span class="st">&quot;name&quot;</span>, <span class="st">&quot;positive_proportion&quot;</span>, <span class="st">&quot;total_reviews&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(highest[[<span class="st">&quot;name&quot;</span>, <span class="st">&quot;positive_proportion&quot;</span>, <span class="st">&quot;total_reviews&quot;</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>name                   Grilled Salmon With Avocado Salsa
 positive_proportion                             0.987355
 total_reviews                                     1898.0
-Name: 11, dtype: object</code></pre>
+Name: 14, dtype: object</code></pre>
 </div>
 </div>
 <p>5. Take the avocado JSON data from above (you do NOT need to read in the data from the REST API again). How many recipes are vegetarian? You should be able to identify this from the “tags” attribute.</p>
 <p>Hint: Try using <code>json_normalize</code> with “tags” as the record path to flatten the data so that there is one row for each tag.</p>
-<div id="cell-35" class="cell" data-execution_count="64">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>df_tags <span class="op">=</span> pd.json_normalize(</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    avocado_recipes.to_dict(<span class="st">&quot;records&quot;</span>),</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    record_path<span class="op">=</span><span class="st">&quot;tags&quot;</span>,</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    meta<span class="op">=</span>[<span class="st">&quot;id&quot;</span>, <span class="st">&quot;name&quot;</span>],</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    meta_prefix<span class="op">=</span><span class="st">&quot;recipe_&quot;</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>vegetarian <span class="op">=</span> df_tags[</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>    df_tags[<span class="st">&quot;display_name&quot;</span>].<span class="bu">str</span>.lower() <span class="op">==</span> <span class="st">&quot;vegetarian&quot;</span></span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>vegetarian[<span class="st">&quot;id&quot;</span>].nunique()</span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>vegetarian <span class="op">=</span> df_tags[</span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    df_tags[<span class="st">&quot;name&quot;</span>].<span class="bu">str</span>.lower() <span class="op">==</span> <span class="st">&quot;vegetarian&quot;</span></span>
-<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(vegetarian)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="64">
-<pre><code>209</code></pre>
+<div id="cell-35" class="cell" data-execution_count="21">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># YOUR CODE HERE. ADD CELLS AS NEEDED</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>df_tags <span class="op">=</span> pd.json_normalize(</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    avocado_recipes.to_dict(<span class="st">&quot;records&quot;</span>),</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    record_path<span class="op">=</span><span class="st">&quot;tags&quot;</span>,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    meta<span class="op">=</span>[<span class="st">&quot;id&quot;</span>, <span class="st">&quot;name&quot;</span>],</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    meta_prefix<span class="op">=</span><span class="st">&quot;recipe_&quot;</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>vegetarian <span class="op">=</span> df_tags[</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    df_tags[<span class="st">&quot;display_name&quot;</span>].<span class="bu">str</span>.lower() <span class="op">==</span> <span class="st">&quot;vegetarian&quot;</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>vegetarian[<span class="st">&quot;id&quot;</span>].nunique()</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>vegetarian <span class="op">=</span> df_tags[</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    df_tags[<span class="st">&quot;name&quot;</span>].<span class="bu">str</span>.lower() <span class="op">==</span> <span class="st">&quot;vegetarian&quot;</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(vegetarian)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="21">
+<pre><code>212</code></pre>
 </div>
 </div>
 </section>
